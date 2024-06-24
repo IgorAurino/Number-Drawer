@@ -1,0 +1,168 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de variáveis de cores */
+:root {
+    --color-white: #FBFFFF;
+    --text-blue: #202D45;
+    --background-light-blue: #1D4485;
+    --background-dark-blue: #ACDDF5;
+}
+
+/* Estilos gerais para HTML e BODY */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, var(--background-light-blue), var(--background-dark-blue));
+}
+
+/* Container principal da página */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 2% 0;
+}
+
+/* Animações definidas */
+@keyframes moveUpDown {
+    0% { transform: translateY(0) rotate(1deg); }
+    25% { transform: translateY(-7px) rotate(2deg); }
+    50% { transform: translateY(0) rotate(1deg); }
+    75% { transform: translateY(-7px) rotate(-2deg); }
+    100% { transform: translateY(0) rotate(1deg); }
+}
+
+@keyframes rotateLogo {
+    0% { transform: rotate(-20deg) scale(0.5); }
+    25% { transform: rotate(-340deg) scale(0.5); }
+    50% { transform: rotate(20deg) scale(1); }
+    100% { transform: rotate(-20deg) scale(0.5); }
+}
+
+@keyframes rotateBtn {
+    0% { transform: rotate(-340deg) scale(1.2); }
+    50% { transform: rotate(-20deg) scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes moveDown {
+    0% { transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-5px); }
+    20%, 80% { transform: translateX(5px); }
+    30%, 50%, 70% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.error-shake {
+    animation: shake 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    color: #e74c3c;
+}
+
+/* Elementos do logotipo */
+.box-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo > img {
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    animation: rotateLogo 10s infinite ease-in-out;
+}
+
+/* Título principal */
+.title > p {
+    font-weight: bold;
+    color: #FBFFFF;
+    text-shadow: 1px 1px 1px rgba(32, 45, 69, 0.63);
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    padding-bottom: 60px;
+    animation: moveUpDown 6s infinite ease-in-out;
+}
+
+/* Textos gerais */
+.text {
+    font-weight: bold;
+    color: #FBFFFF;
+    text-shadow: 1px 1px 1px rgba(32, 45, 69, 0.63);
+    margin-top: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 20px;
+}
+
+/* Entradas numéricas */
+.textbox {
+    margin: 10px;
+    border-radius: 6px;
+    color: #202D45;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(251, 255, 255, 0.4);
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+/* Botão principal */
+.btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: var(--color-white);
+    background-color: #1D438581;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ACDDF567;
+    box-shadow: 0px 4px 6px rgba(32, 45, 69, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+    .textbox {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

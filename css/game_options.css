@@ -1,0 +1,189 @@
+/* Estilos para a página de opções de jogo */
+
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de variáveis de cores */
+:root {
+    --color-white: #fbfffff4;
+    --text-blue: #202D45;
+    --background-light-blue: #1D4485;
+    --background-dark-blue: #ACDDF5;
+}
+
+/* Estilos gerais para HTML e BODY */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, var(--background-light-blue), var(--background-dark-blue));
+}
+
+/* Container principal da página */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding: 0 0;
+}
+
+@keyframes moveUpDown {
+    0% { transform: translateY(0) rotate(1deg); }
+    25% { transform: translateY(-7px) rotate(2deg); }
+    50% { transform: translateY(0) rotate(1deg); }
+    75% { transform: translateY(-7px) rotate(-2deg); }
+    100% { transform: translateY(0) rotate(1deg); }
+}
+
+@keyframes rotateLogo {
+    0% { transform: rotate(-20deg) scale(0.5); }
+    25% { transform: rotate(-340deg) scale(0.5); }
+    50% { transform: rotate(20deg) scale(1); }
+    100% { transform: rotate(-20deg) scale(0.5); }
+}
+
+@keyframes rotateBtn {
+    0% { transform: rotate(-340deg) scale(1.2); }
+    50% { transform: rotate(-20deg) scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes moveDown {
+    0% { transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-5px); }
+    20%, 80% { transform: translateX(5px); }
+    30%, 50%, 70% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Elementos do logotipo */
+.box-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo > img {
+    height: 100px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    animation: rotateLogo 10s infinite ease-in-out;
+}
+
+/* Título principal */
+.title > p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FBFFFF;
+    text-shadow: 1px 1px 1px rgba(32, 45, 69, 0.63);
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    animation: moveUpDown 6s infinite ease-in-out;
+}
+
+/* Padronização de Texto*/
+.defaultText {
+    color: var(--color-white);
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 2px 2px 2px #202d45a3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10;
+}
+
+/* Estilos para as opções de jogo */
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+/* Estilo para textbox */
+.textbox {
+    margin: 20px;
+    border-radius: 6px;
+    color: #202D45;
+    width: 175px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(251, 255, 255, 0.4);
+    outline: none;
+    border: none;
+    font-size: 150%;
+}
+
+/* Estilos para o botão de sortear */
+#btnSortear {
+    width: 200px;
+    height: 60px;
+    background-color: #1D438581;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#btnSortear:hover {
+    background-color: #ACDDF567;
+    animation: moveUpDown 6s infinite ease-in-out;
+}
+
+/* Estilos para o botão de home */
+.btn-home {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    background-color: #1D438581;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #ACDDF567;
+    animation: moveUpDown 6s infinite ease-in-out;
+}

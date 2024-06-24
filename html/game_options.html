@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/game_options.css">
+    <title>Opções de Jogo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box-logo">
+            <div class="logo">
+                <img src="/css/module/cubo.png" alt="Cubo de Dados.png">
+            </div>
+            <div class="title">
+                <p><b>SORTEADOR DE NÚMEROS</b></p>
+            </div>
+        </div>
+        <div class="options">
+            <div class="option">
+                <label class="defaultText" for="inicio-numeros">De:</label>
+                <input class="textbox" type="number" id="inicio-numeros" min="1" max="100" value="1">
+            </div>
+            <div class="option">
+                <label class="defaultText" for="fim-numeros">Até:</label>
+                <input class="textbox" type="number" id="fim-numeros" min="1" max="100" value="10">
+            </div>
+            <button id="btnSortear">SORTEAR</button>
+        </div>
+        <div>
+            <button onclick="location.href='/html/index.html';" class="btn-home">HOME</button>
+        </div>
+    </div>
+    <script src="../java/app.js" defer></script>
+</body>
+</html>

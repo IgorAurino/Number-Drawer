@@ -1,0 +1,200 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Definição de variáveis de cores */
+:root {
+    --color-white: #fbffff;
+    --text-blue: #202D45;
+    --background-light-blue: #1D4485;
+    --background-dark-blue: #ACDDF5;
+}
+
+/* Estilos gerais para HTML e BODY */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, var(--background-light-blue), var(--background-dark-blue));
+}
+
+/* Container principal da página */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2% 0;
+}
+
+/* Animações definidas */
+@keyframes moveUpDown {
+    0% { transform: translateY(0) rotate(1deg); }
+    25% { transform: translateY(-7px) rotate(2deg); }
+    50% { transform: translateY(0) rotate(1deg); }
+    75% { transform: translateY(-7px) rotate(-2deg); }
+    100% { transform: translateY(0) rotate(1deg); }
+}
+
+@keyframes rotateLogo {
+    0% { transform: rotate(-20deg) scale(0.5); }
+    25% { transform: rotate(-340deg) scale(0.5); }
+    50% { transform: rotate(20deg) scale(1); }
+    100% { transform: rotate(-20deg) scale(0.5); }
+}
+
+@keyframes rotateBtn {
+    0% { transform: rotate(-340deg) scale(1.2); }
+    50% { transform: rotate(-20deg) scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes moveDown {
+    0% { transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-5px); }
+    20%, 80% { transform: translateX(5px); }
+    30%, 50%, 70% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.error-shake {
+    animation: shake 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    color: #fa4530;
+}
+
+.bounce {
+    animation: bounce 0.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Elementos do logotipo */
+.box-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo > img {
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    animation: rotateLogo 10s infinite ease-in-out;
+}
+
+/* Título principal */
+.title > p {
+    font-weight: bold;
+    color: #FBFFFF;
+    text-shadow: 1px 1px 1px rgba(32, 45, 69, 0.63);
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    padding-bottom: 60px;
+    animation: moveUpDown 6s infinite ease-in-out;
+}
+
+/* Textos gerais */
+.text {
+    font-weight: bold;
+    color: #FBFFFF;
+    text-shadow: 1px 1px 1px rgba(32, 45, 69, 0.63);
+    margin-top: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 30px;
+}
+
+/* Entradas numéricas de De e Até */
+.textbox {
+    margin: 20px;
+    border-radius: 6px;
+    color: #202D45;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(251, 255, 255, 0.4);
+    outline: none;
+    border: none;
+    font-size: 150%;
+}
+
+/* Estilos específicos para as entradas numéricas */
+.input-number-de::-webkit-outer-spin-button,
+.input-number-de::-webkit-inner-spin-button,
+.input-number-ate::-webkit-outer-spin-button,
+.input-number-ate::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-number-de[type=number],
+.input-number-ate[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Botões principais */
+.btn-play, .btnSend {
+    width: 300px;
+    height: 75px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    color: var(--color-white);
+    background-color: #1D438581;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.btn-play:hover, .btnSend:hover {
+    font-size: 25px;
+    background-color: #ACDDF567;
+    box-shadow: 0px 10px 10px rgba(32, 45, 69, 0.51);
+    transform: scale(1.01) rotate(5deg);
+    animation: moveUpDown 6s infinite;
+}
+
+.btnSend.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: #1d43854b;
+    color: var(--color-white);
+}
+
+.box-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 130px;
+}
+
+.enter-the-number {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
